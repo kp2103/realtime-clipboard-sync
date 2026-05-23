@@ -1,0 +1,36 @@
+.room-id-card-container {
+  display: flex;
+  flex-direction: column;
+  padding: var(--rem-1);
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  gap: var(--rem-1);
+}
+
+.room-id-card__id {
+  border: 1px solid #e5e7eb;
+
+  background-color: var(--card-bg);
+  box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  gap: var(--rem-half);
+  display: flex;
+  padding: var(--rem-half);
+  flex-direction: column;
+  font-size: 1.3rem;
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.room-id-card__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.room-id-card__header-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
