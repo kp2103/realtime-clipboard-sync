@@ -1,5 +1,8 @@
-type ContentType = 'Image' | 'Text'| 'Code' 
+import type { ClipboardData } from "../Dashboard/dashboard.type";
+
+type ContentType = "Image" | "Text" | "Code";
 
 export interface CardProps {
-    contentType:ContentType
+  contentType: ContentType;
+  clipboardData?: ClipboardData;
 }

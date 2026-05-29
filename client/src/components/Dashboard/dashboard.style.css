@@ -10,7 +10,7 @@
 .dashboard__header{
     display: flex;
     flex-direction: column;
-    padding: var(--rem-2) 0 0 0 ;
+    padding: var(--rem-1) 0 0 0 ;
     gap: var(--rem-half);
 }
 .dashboard__header-heading
@@ -37,6 +37,7 @@
 .dashboard__main{
     display: flex;
     gap: var(--rem-1);
+    overflow: hidden;
 }
 
 .dashboard__main-history{
@@ -44,7 +45,22 @@
     flex-direction: column;
     gap: var(--rem-1);
     flex: 1;
+    overflow-y: auto;
 }
 .dashboard__main-preview{
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--rem-1);
+}
+
+.dashboard__main-join-room{
+  display: flex;
+  align-items: center;
+  gap: var(--rem-half);
+  background: #FFF;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+  padding: var(--rem-half);
+  transition: all 0.2s ease
 }

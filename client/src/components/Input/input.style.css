@@ -1,0 +1,17 @@
+.input-container{
+ height: 100%;
+ border-radius: 5px;
+}
+
+.input-container:focus-within{
+  border: 1px solid var(--primary-color);
+}
+
+.input{
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  height: 100%;
+  padding: 0 var(--rem-half);
+}

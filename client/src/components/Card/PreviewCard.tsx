@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import type { CardProps } from "./card.type";
 
-export default function Card({ contentType }: CardProps) {
+export default function Card({ contentType, clipboardData }: CardProps) {
   return (
     <div className="preview-card-container">
       <section className="preview-card__header">
@@ -20,7 +20,7 @@ export default function Card({ contentType }: CardProps) {
       <section>
         <div className="preview-card__avatar">
           {contentType === "Code" ? (
-            <Code2Icon size={'3rem'}/>
+            <Code2Icon size={"3rem"} />
           ) : contentType === "Text" ? (
             <TextInitialIcon />
           ) : (
@@ -29,10 +29,20 @@ export default function Card({ contentType }: CardProps) {
         </div>
       </section>
       <section className="preview-card__content">
-        <p className="preview-card__content-heading">Title</p>
+        <p className="preview-card__content-heading">
+          {clipboardData ? clipboardData.data : "Title"}
+        </p>
         <div className="preview-card__content-datetime">
-          <p>Date</p>
-          <p>Time</p>
+          <p>
+            {clipboardData && clipboardData.date
+              ? clipboardData.date.toLocaleDateString()
+              : "Date"}
+          </p>
+          <p>
+            {clipboardData && clipboardData.date
+              ? clipboardData.date.toLocaleTimeString()
+              : "Time"}
+          </p>
         </div>
       </section>
 
